@@ -2,9 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 17832,
-  "expoServerNgrokUrl": "https://v4-q8z.anonymous.yukt.exp.direct",
-  "packagerNgrokUrl": "https://packager.v4-q8z.anonymous.yukt.exp.direct",
-  "ngrokPid": 19736,
+  "packagerPid": 6700,
+  "expoServerNgrokUrl": "https://v4-q8z.anonymous.yukt-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.v4-q8z.anonymous.yukt-app.exp.direct",
+  "ngrokPid": 15316,
   "webpackServerPort": 19006
 }

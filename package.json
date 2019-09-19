@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@unimodules/react-native-adapter": "^3.0.0",
+    "@unimodules/react-native-adapter": "~2.0.1",
     "apollo-boost": "^0.1.10",
     "apollo-client": "^2.3.5",
     "email-validator": "^2.0.4",
@@ -43,12 +43,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "metro-react-native-babel-preset": "0.54.0",
     "babel-jest": "22.4.3",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.3",
-    "react-test-renderer": "16.3.1",
-    "jest-expo": "^33.0.0"
+    "jest-expo": "^33.0.0",
+    "metro-react-native-babel-preset": "0.54.0",
+    "react-test-renderer": "16.3.1"
   },
   "jest": {
     "preset": "react-native"

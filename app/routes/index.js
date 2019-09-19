@@ -15,7 +15,7 @@ const Route = createStackNavigator(
  navigationOptions: {
  	headerStyle: {
  		backgroundColor: themes.BACKGROUND_COLOR,
- 		paddingHorizontal: 10,
+ 		
  	},
  	headerTintColor: '#fff'
  }
