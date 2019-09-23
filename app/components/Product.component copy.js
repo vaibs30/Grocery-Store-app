@@ -27,8 +27,8 @@ class Product extends Component {
 
 async componentDidMount() {
   await Font.loadAsync({
-    'Roboto': require('./Roboto.ttf'),
-    'Roboto_medium': require('./Roboto_medium.ttf'),
+    'Roboto': require('node_modules\native-base\Fonts\Roboto.ttf'),
+    'Roboto_medium': require('node_modules\native-base\Fonts\Roboto_medium.ttf'),
     ...Ionicons.font,
   })
   this.setState({ loading: false })
