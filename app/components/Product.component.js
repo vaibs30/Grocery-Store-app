@@ -17,20 +17,7 @@ class Product extends Component {
     render() {
         const { product } = this.props;
             return (
-     /*   <View>
-        <View>
-        <Thumbnail source={product.picture} style={{width:70,height:70}}/>
-        </View>
-            <View style={styles.container}>
-            <View style={styles.productDes}>
-                <Text>{product.title}</Text>
-                <Text>Rs {(product.cost).toFixed(2)}</Text>
-                <TouchableOpacity onPress={this.addToCart} style={styles.addBtn}>
-                    <Text style={styles.text}>Add to cart</Text>
-                </TouchableOpacity>
-            </View>
-        </View>  
-            </View> */
+    
             <List>
             <ListItem avatar key={product.id}>
               <Left>
@@ -54,22 +41,7 @@ class Product extends Component {
 }
 
 const styles = StyleSheet.create({
- /*   container:{
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        justifyContent: 'space-between',
-        margin: 10,
-    },
-    productDes: {
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        marginTop: 10,
-        marginLeft : 20,
-        flex : 1,
-        flexDirection : 'row',
-    },
-    */
+
    addBtn: {
     borderRadius: 30,
     margin: 10,

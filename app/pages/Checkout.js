@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import CheckoutItems from '../components/CheckoutItems.component';
 import Logo from '../components/Logo.component';
 import Cart from '../components/Cart.component';
@@ -17,7 +16,7 @@ export class Checkout extends Component {
     render() {
     	const { cartItems, navigation, cartTotal } = this.props;
         return (
-            <CheckoutItems cartItems={cartItems} cartTotal={cartTotal} navigation={navigation}/>
+            <CheckoutItems cartItems={cartItems} cartTotal={cartTotal} navigation={navigation} />
         );
     }
 }

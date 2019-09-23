@@ -16,8 +16,8 @@ class Products extends Component {
   static navigationOptions = ({navigation}) => {
     return {
       headerTitle: 'Products          ',
-      headerLeft: <Logo navigation={navigation}/>,
-      headerRight: <Cart navigation={navigation}/>
+    //  headerLeft: <Logo navigation={navigation}/>,
+     headerRight: <Cart navigation={navigation}/>
     }
   }
   constructor(props) {
@@ -42,7 +42,7 @@ class Products extends Component {
           data={products} 
           renderItem={({item}) => <Product item={item} addItemsToCart={this.addItemsToCart} product={item}/>}
           keyExtractor ={(item) => item.id}
-          ItemSeparatorComponent= {()=> <View style={{height:0.5, backgroundColor:'#34495e90'}}/> }/>
+          ItemSeparatorComponent= {()=> <View style={{height:3.5, backgroundColor:'skyblue'}}/> }/>
         </View>
       </View>
  

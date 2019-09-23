@@ -3,7 +3,6 @@ import {
     View, 
     Text,
     StyleSheet,
-    TouchableOpacity,
     Alert 
 } from 'react-native';
 
@@ -26,7 +25,7 @@ class CartItems extends Component {
             right: [
                 {
                     onPress: () => {
-                        const deleteRow = this.state.activeRowKey;
+                        
                         Alert.alert(
                             'Alert',
                             'Are you sure you want to delete?',

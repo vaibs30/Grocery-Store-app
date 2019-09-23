@@ -13,8 +13,15 @@ import {
 import CartItems  from './CartItems.component';
 
 class CheckoutItems extends Component {  
+  constructor(props) {
+	  super(props);
+	
+	}
+	onPress = () => {
+		this.props.navigation.navigate('Products');
+	}
   render() {
-  	const { cartItems, navigation, cartTotal } = this.props;
+    const { cartItems, navigation, cartTotal } = this.props;
     return (
       <View style={styles.container}>
             	
@@ -32,9 +39,9 @@ class CheckoutItems extends Component {
             		</View>
                 <View style={styles.btnContainer}>
                 <TouchableOpacity  style={styles.addBtn}>
-                    <Text style={styles.btntext}>      BUY     </Text>
+                    <Text style={styles.btntext} >      BUY     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity  style={styles.addBtn}>
+                <TouchableOpacity  style={styles.addBtn} onPress={this.onPress}>
                     <Text style={styles.btntext}>CANCEL</Text>
                 </TouchableOpacity>
                 </View>

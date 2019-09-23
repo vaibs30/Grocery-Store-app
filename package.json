@@ -12,6 +12,7 @@
     "apollo-client": "^2.3.5",
     "email-validator": "^2.0.4",
     "expo": "^33.0.0",
+    "expo-secure-store": "~5.0.1",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
     "native-base": "^2.13.8",
