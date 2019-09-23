@@ -8,6 +8,7 @@ import Products from '../pages/Products';
 import Checkout from '../pages/Checkout';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
+import { Root } from "native-base";
 
 
 const CartNavigator = createStackNavigator({
@@ -230,9 +231,12 @@ const CustomDrawerContentComponent = (props) => (
 			render() {
 			
 			return (
-			  <View style={{flex:10, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight}}>
+				<Root>
+				<View style={{flex:10, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight}}>
 				   <MainNavigator />
 			  </View>
+				</Root>
+			  
 			);
 			}
 			}		  

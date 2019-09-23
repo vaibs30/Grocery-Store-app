@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { 
     View, 
@@ -6,13 +7,27 @@ import {
     StyleSheet,
     TouchableOpacity,
 } from 'react-native';
-import { ListItem, Left, Body, Right, List, Thumbnail, Icon,Button } from 'native-base';
+import {
+  Icon
+} from 'react-native-elements';
+import { ListItem, Left, Body, Right, List, Thumbnail, Button, Toast } from 'native-base';
+import NumericInput from 'react-native-numeric-input';
 
-import themes from '../styles/theme.style';
 
 class Product extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 0,
+      showToast: false
+	  };
+}
     addToCart = () => {
-        this.props.addItemsToCart(this.props.item)
+        this.props.addItemsToCart(this.props.item);
+        Toast.show({
+          text: 'Item has been added!',
+          buttonText: 'Okay'
+        })
     }
     render() {
         const { product } = this.props;
@@ -28,11 +43,39 @@ class Product extends Component {
                 <Text note style={{ fontSize: 15}}>Price is : Rs {product.cost}</Text>
               </Body>
               <Right style={styles.btnContainer}>
-              <TouchableOpacity onPress={this.addToCart} style={styles.addBtn}>
-                    <Text style={styles.text}>Add to cart</Text>
-                </TouchableOpacity>
+              <View>
+              <NumericInput 
+            value={this.state.value} 
+            onChange={value => this.setState({value})} 
+            totalWidth={180} 
+            totalHeight={40} 
+            iconSize={20}
+            step={1}
+            valueType='real'
+            rounded 
+            minValue={0}
+            textColor='#B0228C' 
+            iconStyle={{ color: 'white' }} 
+            rightButtonBackgroundColor='#EA3788' 
+            leftButtonBackgroundColor='#E56B70'/>
+            
+            <View>
+            <Icon
+        name="shopping-cart"
+        type="font-awesome"
+        size={35}
+        iconStyle={{ color: '#EA3788' }}
+        onPress={this.addToCart}
+        
+            />
+           
+            </View>
+
+            </View>
+              
               </Right>
             </ListItem>
+            
           </List>
            
        
@@ -43,10 +86,10 @@ class Product extends Component {
 const styles = StyleSheet.create({
 
    addBtn: {
-    borderRadius: 30,
+    borderRadius: 50,
     margin: 10,
     alignItems: 'center',
-    alignItems: 'flex-end',
+    alignItems: 'center',
     backgroundColor: 'steelblue'
 },
     text: {
