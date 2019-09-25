@@ -35,7 +35,9 @@ async componentDidMount() {
 }
 
     addToCart = () => {
+      for (let i=0; i < this.state.value; i++) {
         this.props.addItemsToCart(this.props.item);
+      }
         Toast.show({
           text: 'Item has been added!',
           buttonText: 'Okay'
@@ -71,6 +73,7 @@ async componentDidMount() {
             valueType='real'
             rounded 
             minValue={0}
+            maxValue={10}
             textColor='#B0228C' 
             iconStyle={{ color: 'white' }} 
             rightButtonBackgroundColor='#EA3788' 

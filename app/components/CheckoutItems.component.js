@@ -7,9 +7,6 @@ import {
   StyleSheet,
   TouchableOpacity
 } from 'react-native';
-
-
-
 import CartItems  from './CartItems.component';
 
 class CheckoutItems extends Component {  

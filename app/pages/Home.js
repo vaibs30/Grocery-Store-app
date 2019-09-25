@@ -14,11 +14,15 @@ class Home extends Component {
 
         };
     }
+
+    
     static navigationOptions = ({navigation}) => {
       return {
         headerTitle: 'Home          ',
       }
     }
+
+    
     
     render(){
       const { navigate } = this.props.navigation;

@@ -84,9 +84,9 @@ const CartNavigator = createStackNavigator({
 		const HomeNavigator = createStackNavigator({
 			Home: { screen: Home },
 			navigationOptions: ({ navigation }) => ({
-			  headerLeft :<TouchableOpacity onPress={ () => navigation.toggleDrawer() }>
-			  <Image source={logoImage} style={{width:30, height:28, margin:10}} />
-		  </TouchableOpacity>
+			//  headerLeft :<TouchableOpacity onPress={ () => navigation.toggleDrawer() }>
+			//  <Image source={logoImage} style={{width:30, height:28, margin:10}} />
+		    //  </TouchableOpacity>
 			
 			})
 			}, {
@@ -96,15 +96,15 @@ const CartNavigator = createStackNavigator({
 			},
 			headerTitleStyle: {
 				color: "#fff"  , 
-				//textAlign: 'center',
-				//alignSelf:'center',
+				textAlign: 'center',
+				alignSelf:'center',
 				
 					   
 			},
 			headerTintColor: "#fff",
-			headerLeft: <TouchableOpacity onPress={ () => navigation.toggleDrawer() }>
-			<Image source={logoImage} style={{width:30, height:28, margin: 10}} />
-		</TouchableOpacity>
+			//headerLeft: <TouchableOpacity onPress={ () => navigation.toggleDrawer() }>
+			//<Image source={logoImage} style={{width:30, height:28, margin: 10}} />
+		    //</TouchableOpacity>
 			})
 			});		
 
@@ -145,6 +145,7 @@ const CustomDrawerContentComponent = (props) => (
 	  navigationOptions: {
 		title: 'Home  ',
 		drawerLabel: 'Home  ',
+		drawerLockMode: 'locked-closed',
 		drawerIcon: ({ tintColor, focused }) => (
 		  <Icon
 			name='home'
@@ -160,8 +161,9 @@ const CustomDrawerContentComponent = (props) => (
 	{ screen: LoginNavigator,
 	   navigationOptions: {
 		title: '',
-		drawerLabel: '',
-		
+		drawerLabel: () => null,
+		drawerLockMode: 'locked-closed',
+
 	  } 
 	  
 	},
